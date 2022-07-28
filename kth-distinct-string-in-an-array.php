@@ -7,16 +7,16 @@ class Solution {
      * @return String
      */
     function kthDistinct($arr, $k) {
-        $ar=[];
-        for($i=0; $i<count($arr);$i++)
+        $ar=array();
+        for($i=0; $i<=count($arr);$i++)
         {
-           
-            if (!in_array($arr[$i], ($arr[$i])))
+           $a=$arr;
+            if (!in_array($arr[$i], array_splice($a, $i)))
             {
-                $ar=arrat_push($arr[i]);
+                $ar[]=$arr[$i];
             }
         }
-        return  unset($arr[$k]);
+        return  $ar;
         
     }
 }
